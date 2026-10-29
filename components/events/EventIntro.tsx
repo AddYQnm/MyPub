@@ -7,31 +7,37 @@ const gallery = [
     image: "/images/events/billard-1.jpg",
     alt: "Joueur en pleine partie de billard",
     caption: "Jouez pour le plaisir",
+    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
   },
   {
     image: "/images/events/billard-2.jpg",
-    alt: "Boule de billard sur le tapis",
-    caption: "Visez juste",
+    alt: "Boule et queue de billard sur le tapis",
+    caption: "",
+    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
   },
   {
     image: "/images/events/billard-3.jpg",
-    alt: "Tables de billard dans une ambiance chaleureuse",
-    caption: "Profitez du lieu",
+    alt: "Espace billard dans une ambiance chaleureuse",
+    caption: "Découvrez notre univers",
+    width: "w-[310px] sm:w-[390px] lg:w-[430px]",
   },
   {
     image: "/images/events/billard-4.jpg",
     alt: "Préparation d'une partie de billard",
-    caption: "Relevez le défi",
+    caption: "",
+    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
   },
   {
     image: "/images/events/billard-5.jpg",
-    alt: "Amis réunis autour d'une table de billard",
-    caption: "Partagez le moment",
+    alt: "Joueuse de billard dans une ambiance conviviale",
+    caption: "",
+    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
   },
   {
     image: "/images/events/billard-6.jpg",
     alt: "Table de billard éclairée",
     caption: "Prolongez la soirée",
+    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
   },
 ];
 
@@ -41,74 +47,75 @@ export default function EventIntro() {
   return (
     <section
       id="event-intro"
-      className="scroll-mt-10 overflow-hidden bg-[#0b0a09] text-[#f0e8da]"
+      className="overflow-hidden bg-[#080706] text-[#f0e8da]"
     >
-      {/* Texte central */}
+      {/* INTRODUCTION */}
       <motion.div
-        className="mx-auto flex max-w-4xl flex-col items-center px-6 pb-16 pt-20 text-center md:pb-20 md:pt-28"
-        initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+        className="px-5 pb-10 pt-20 text-center sm:pb-12 sm:pt-24 lg:pb-14 lg:pt-28"
+        initial={reduceMotion ? false : { opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
-        transition={{
-          duration: 0.9,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <p className="mb-6 text-[9px] uppercase tracking-[0.4em] text-[#c17a3d] md:text-[10px]">
-          L&apos;esprit MY PUB
-        </p>
-
-        <h2 className="max-w-3xl font-serif text-5xl font-normal uppercase leading-[0.95] tracking-[-0.045em] text-[#c17a3d] sm:text-6xl md:text-8xl">
-          Bien plus
-          <br />
-          qu&apos;un billard
+        {/* Titre */}
+        <h2 className="mx-auto font-['Bodoni_Moda'] text-[clamp(2.8rem,7vw,6.5rem)] font-normal uppercase leading-[0.88] tracking-[-0.055em] text-[#b96b2d]">
+          <span className="block">Bien plus,</span>
+          <span className="mt-2 block">qu&apos;un billard</span>
         </h2>
 
-        <span
+        {/* Ornement */}
+        <div
           aria-hidden="true"
-          className="my-7 text-xl text-[#c17a3d]"
+          className="my-8 text-xl font-light text-[#b96b2d] sm:my-9"
         >
-          ✳
-        </span>
+          ✦
+        </div>
 
-        <div className="max-w-md space-y-4 text-xs leading-6 text-white/65 md:text-sm md:leading-7">
+        {/* Texte */}
+        <div className="mx-auto max-w-[420px] space-y-3 text-[11px] leading-[1.65] text-[#e7ded3]/75 sm:max-w-[470px] sm:text-xs sm:leading-[1.8]">
           <p>
-            Un lieu pour les passionnés de jeu, les amateurs de belles
-            soirées et tous ceux qui aiment se retrouver autour d&apos;une table.
+            Un lieu pensé pour ceux qui aiment se retrouver, partager une
+            partie de billard et profiter d&apos;un moment hors du temps.
           </p>
 
           <p>
-            Ici, les parties s&apos;enchaînent, les rencontres se créent et
-            chaque moment devient une occasion de partager quelque chose.
+            Ici, le jeu rencontre une atmosphère chaleureuse, entre
+            moments entre amis, défis improvisés et soirées qui se
+            prolongent naturellement.
           </p>
         </div>
       </motion.div>
 
-      {/* Galerie de photos */}
+      {/* GALERIE PANORAMIQUE */}
       <motion.div
-        className="grid grid-cols-2 gap-[5px] px-[5px] sm:grid-cols-3 lg:grid-cols-6"
-        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        role="region"
+        aria-label="Galerie photos MY PUB"
+        className="flex snap-x snap-mandatory gap-[5px] overflow-x-auto overscroll-x-contain px-0 pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        initial={reduceMotion ? false : { opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
-        transition={{
-          duration: 0.8,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+        transition={{ duration: 0.9 }}
       >
         {gallery.map((item, index) => (
-          <figure key={item.image} className="group min-w-0">
-            <div className="relative aspect-[4/5] overflow-hidden bg-[#201b17] sm:aspect-[3/4] lg:aspect-[2/3]">
+          <figure
+            key={item.image}
+            className={`group min-w-0 flex-none snap-start ${item.width}`}
+          >
+            {/* Photo rectangulaire */}
+            <div className="relative h-[210px] overflow-hidden bg-[#171310] sm:h-[245px] lg:h-[260px]">
               <img
                 src={item.image}
                 alt={item.alt}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading={index < 3 ? "eager" : "lazy"}
+                draggable={false}
+                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
 
-              <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/0" />
+              <div className="pointer-events-none absolute inset-0 bg-black/[0.04] transition-colors duration-500 group-hover:bg-transparent" />
             </div>
 
-            <figcaption className="flex min-h-12 items-center px-2 py-3 text-[9px] leading-4 text-white/60 sm:text-[10px]">
+            {/* Légende discrète */}
+            <figcaption className="flex h-12 items-center px-3 text-[9px] tracking-wide text-[#d8cfc4]/65 sm:h-14 sm:px-4 sm:text-[10px]">
               {item.caption}
             </figcaption>
           </figure>
