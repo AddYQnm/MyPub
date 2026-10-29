@@ -23,7 +23,7 @@ export default function AtmosphereSection() {
       <div className="atmosphere-heading">
         <div>
           <span className="section-eyebrow">
-            L'EXPÉRIENCE MY PUB
+            L&apos;EXPÉRIENCE MY PUB
           </span>
           <h2>
             Une ambiance
@@ -34,7 +34,7 @@ export default function AtmosphereSection() {
 
         <p>
           Des instants simples, des soirées mémorables
-          et le plaisir d'être ensemble.
+          et le plaisir d&apos;être ensemble.
         </p>
       </div>
 

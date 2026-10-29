@@ -36,14 +36,14 @@ export default function BilliardSection() {
         </p>
 
         <h2 className="font-serif text-5xl leading-tight md:text-6xl">
-          L'expérience
+          L&apos;expérience
           <br />
           <span className="italic text-[#d18a9d]">billard.</span>
         </h2>
 
         <p className="mt-7 max-w-md text-sm leading-8 text-white/65">
           Retrouvez-vous autour de la table, lancez la partie et profitez
-          de l'atmosphère du lieu.
+          de l&apos;atmosphère du lieu.
         </p>
 
         <a

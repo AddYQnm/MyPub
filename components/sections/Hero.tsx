@@ -29,7 +29,7 @@ export default function Hero() {
           <br />
           Un verre entre amis, une table à partager,
           <br />
-          et l'envie de faire durer la soirée.
+          et l&apos;envie de faire durer la soirée.
         </p>
 
         <Button href="#carte" variant="outline">

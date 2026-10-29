@@ -11,7 +11,7 @@ export default function VisitSection() {
 
       <div className="visit-editorial-panel">
         <span className="visit-editorial-eyebrow">
-          L'INVITATION MY PUB
+          L&apos;INVITATION MY PUB
         </span>
 
         <h2>

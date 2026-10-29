@@ -19,7 +19,7 @@ export default function ExperienceSection() {
     <section className="experience-editorial" id="apropos">
       <div className="experience-editorial-copy">
         <span className="experience-kicker">
-          L'UNIVERS MY PUB
+          L&apos;UNIVERS MY PUB
         </span>
 
         <h2>
@@ -33,7 +33,7 @@ export default function ExperienceSection() {
         <p>
           Des cocktails à savourer, des assiettes à partager
           et des soirées qui se prolongent.
-          Bienvenue dans l'univers MY PUB.
+          Bienvenue dans l&apos;univers MY PUB.
         </p>
 
         <a className="experience-cta" href="#univers">

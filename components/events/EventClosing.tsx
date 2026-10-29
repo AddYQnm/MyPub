@@ -46,11 +46,11 @@ export default function EventClosing() {
         }}
       >
         <p className="mb-4 text-[9px] uppercase tracking-[0.35em] text-[#c17a3d] md:text-[10px]">
-          L'expérience MY PUB
+          L&apos;expérience MY PUB
         </p>
 
         <h2 className="font-['Bodoni_Moda'] text-4xl font-normal leading-tight sm:text-5xl md:text-6xl">
-          Bien plus qu'une partie.
+          Bien plus qu&apos;une partie.
         </h2>
 
         <p className="mt-5 max-w-md text-xs leading-6 text-white/75 sm:text-sm sm:leading-7">
@@ -62,7 +62,7 @@ export default function EventClosing() {
           href="#evenements"
           className="mt-7 inline-flex items-center gap-4 border-b border-[#c17a3d]/70 pb-2 text-[10px] uppercase tracking-[0.2em] transition-colors hover:text-[#c17a3d]"
         >
-          Vivez l'expérience
+          Vivez l&apos;expérience
           <span aria-hidden="true">↗</span>
         </a>
       </motion.div>

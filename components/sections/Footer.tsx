@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} MY PUB</span>
+        <span>© 2026 MY PUB</span>
         <span>ROUEN, FRANCE</span>
       </div>
     </footer>
