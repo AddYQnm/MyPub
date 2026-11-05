@@ -22,7 +22,7 @@ export default function EventClosing() {
         }}
       >
         <img
-          src="/images/events/my-pub-club.jpg"
+          src="/images/billard/my-pub-club.jpg"
           alt="L'ambiance chaleureuse du MY PUB"
           className="h-full w-full object-cover object-center"
           loading="lazy"
@@ -45,17 +45,14 @@ export default function EventClosing() {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        <p className="mb-4 text-[9px] uppercase tracking-[0.35em] text-[#c17a3d] md:text-[10px]">
-          L&apos;expérience MY PUB
-        </p>
+        
 
         <h2 className="font-['Bodoni_Moda'] text-4xl font-normal leading-tight sm:text-5xl md:text-6xl">
-          Bien plus qu&apos;une partie.
+          On vient pour un verre. On reste pour l&apos;ambiance.
         </h2>
 
         <p className="mt-5 max-w-md text-xs leading-6 text-white/75 sm:text-sm sm:leading-7">
-          Du jeu, des rencontres et une atmosphère unique. Chez MY PUB,
-          chaque visite devient un moment à part.
+          Un dîner, une partie, quelques cocktails ou simplement l'envie de passer une bonne soirée. MY PUB se vit comme on en a envie.
         </p>
 
         <a

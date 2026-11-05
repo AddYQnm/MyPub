@@ -1,8 +1,8 @@
 
 export const navigationLinks = [
-  { label: "Accueil", href: "#accueil" },
+  { label: "Accueil", href: "/" },
   { label: "La carte", href: "#carte" },
-  { label: "Événements", href: "/evenements" },
+  { label: "Le Billard", href: "/evenements" },
   { label: "À propos", href: "#apropos" },
   { label: "Contact", href: "#contact" },
 ];

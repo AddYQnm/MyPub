@@ -1,4 +1,8 @@
 
+"use client";
+
+import { motion, useReducedMotion } from "motion/react";
+
 const worlds = [
   {
     number: "01",
@@ -21,9 +25,17 @@ const worlds = [
 ];
 
 export default function WorldsSection() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section className="worlds" id="univers">
-      <div className="worlds-heading">
+      <motion.div
+        className="worlds-heading"
+        initial={reduceMotion ? false : { opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <span className="section-eyebrow">
           DEUX UNIVERS, UN MÊME ESPRIT
         </span>
@@ -31,32 +43,56 @@ export default function WorldsSection() {
         <h2>
           À chacun <em>son moment.</em>
         </h2>
-      </div>
+      </motion.div>
 
       <div className="worlds-grid">
-        {worlds.map((world) => (
-          <article className="world-card" key={world.number}>
-            <img
+        {worlds.map((world, index) => (
+          <motion.a
+            href={world.href}
+            aria-label={`${world.label} : ${world.title}`}
+            className="world-card group relative block overflow-hidden"
+            key={world.number}
+            initial={
+              reduceMotion ? false : { opacity: 0, y: 30 }
+            }
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.7,
+              delay: reduceMotion ? 0 : index * 0.15,
+              ease: "easeOut",
+            }}
+            whileHover={reduceMotion ? undefined : { y: -4 }}
+            whileTap={reduceMotion ? undefined : { scale: 0.99 }}
+          >
+            <motion.img
               src={world.image}
-              alt={world.title + " chez MY PUB"}
+              alt=""
               loading="lazy"
+              className="h-full w-full object-cover"
+              whileHover={
+                reduceMotion ? undefined : { scale: 1.05 }
+              }
+              transition={{ duration: 0.8, ease: "easeOut" }}
             />
 
-            <div className="world-overlay" />
+            <div className="world-overlay transition-opacity duration-500 group-hover:opacity-80" />
 
-            <span className="world-number">
-              {world.number}
-            </span>
+            
 
             <div className="world-content">
               <h3>{world.title}</h3>
+
               <p>{world.description}</p>
 
-              <a href={world.href} className="world-link">
-                {world.label} <span>↗</span>
-              </a>
+              <span className="world-link">
+                {world.label}
+                <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                  ↗
+                </span>
+              </span>
             </div>
-          </article>
+          </motion.a>
         ))}
       </div>
     </section>

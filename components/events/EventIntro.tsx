@@ -1,43 +1,44 @@
+
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
 
 const gallery = [
   {
-    image: "/images/events/billard-1.jpg",
+    image: "/images/billard/billard-1.jpg",
     alt: "Joueur en pleine partie de billard",
-    caption: "Jouez pour le plaisir",
-    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
+    caption: "01",
+    width: "w-[280px] sm:w-[340px] lg:w-[390px]",
   },
   {
-    image: "/images/events/billard-2.jpg",
+    image: "/images/billard/billard-2.jpg",
     alt: "Boule et queue de billard sur le tapis",
-    caption: "",
-    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
+    caption: "02",
+    width: "w-[280px] sm:w-[340px] lg:w-[390px]",
   },
   {
-    image: "/images/events/billard-3.jpg",
+    image: "/images/billard/billard-3.jpg",
     alt: "Espace billard dans une ambiance chaleureuse",
-    caption: "Découvrez notre univers",
-    width: "w-[310px] sm:w-[390px] lg:w-[430px]",
+    caption: "03",
+    width: "w-[340px] sm:w-[430px] lg:w-[500px]",
   },
   {
-    image: "/images/events/billard-4.jpg",
+    image: "/images/billard/billard-4.jpg",
     alt: "Préparation d'une partie de billard",
-    caption: "",
-    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
+    caption: "04",
+    width: "w-[280px] sm:w-[340px] lg:w-[390px]",
   },
   {
-    image: "/images/events/billard-5.jpg",
+    image: "/images/billard/billard-5.jpg",
     alt: "Joueuse de billard dans une ambiance conviviale",
-    caption: "",
-    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
+    caption: "05",
+    width: "w-[280px] sm:w-[340px] lg:w-[390px]",
   },
   {
-    image: "/images/events/billard-6.jpg",
+    image: "/images/billard/billard-6.jpg",
     alt: "Table de billard éclairée",
-    caption: "Prolongez la soirée",
-    width: "w-[250px] sm:w-[300px] lg:w-[320px]",
+    caption: "06",
+    width: "w-[280px] sm:w-[340px] lg:w-[390px]",
   },
 ];
 
@@ -47,80 +48,173 @@ export default function EventIntro() {
   return (
     <section
       id="event-intro"
-      className="overflow-hidden bg-[#080706] text-[#f0e8da]"
+      className="overflow-hidden bg-[#0b0a09] text-[#f4e9dc]"
     >
       {/* INTRODUCTION */}
       <motion.div
-        className="px-5 pb-10 pt-20 text-center sm:pb-12 sm:pt-24 lg:pb-14 lg:pt-28"
-        initial={reduceMotion ? false : { opacity: 0, y: 15 }}
+        className="relative overflow-hidden bg-[#6c122b] px-6 py-24 sm:px-10 md:px-16 md:py-32 lg:px-[9%] lg:py-40"
+        initial={reduceMotion ? false : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1],
+        }}
       >
-        {/* Titre */}
-        <h2 className="mx-auto font-['Bodoni_Moda'] text-[clamp(2.8rem,7vw,6.5rem)] font-normal uppercase leading-[0.88] tracking-[-0.055em] text-[#b96b2d]">
-          <span className="block">Bien plus,</span>
-          <span className="mt-2 block">qu&apos;un billard</span>
-        </h2>
-
-        {/* Ornement */}
+        {/* Grain */}
         <div
           aria-hidden="true"
-          className="my-8 text-xl font-light text-[#b96b2d] sm:my-9"
-        >
-          ✦
-        </div>
+          className="pointer-events-none absolute inset-0 opacity-[0.1] mix-blend-soft-light"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E\")",
+          }}
+        />
 
-        {/* Texte */}
-        <div className="mx-auto max-w-[420px] space-y-3 text-[11px] leading-[1.65] text-[#e7ded3]/75 sm:max-w-[470px] sm:text-xs sm:leading-[1.8]">
-          <p>
-            Un lieu pensé pour ceux qui aiment se retrouver, partager une
-            partie de billard et profiter d&apos;un moment hors du temps.
-          </p>
+        <div className="relative mx-auto max-w-[1400px]">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
+            {/* TITRE */}
+            <div className="lg:col-span-7">
+              <motion.p
+                initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-7 text-[9px] uppercase tracking-[0.32em] text-[#f4e9dc]/65"
+              >
+                L&apos;esprit du billard
+              </motion.p>
 
-          <p>
-            Ici, le jeu rencontre une atmosphère chaleureuse, entre
-            moments entre amis, défis improvisés et soirées qui se
-            prolongent naturellement.
-          </p>
-        </div>
-      </motion.div>
-
-      {/* GALERIE PANORAMIQUE */}
-      <motion.div
-        role="region"
-        aria-label="Galerie photos MY PUB"
-        className="flex snap-x snap-mandatory gap-[5px] overflow-x-auto overscroll-x-contain px-0 pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        initial={reduceMotion ? false : { opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.9 }}
-      >
-        {gallery.map((item, index) => (
-          <figure
-            key={item.image}
-            className={`group min-w-0 flex-none snap-start ${item.width}`}
-          >
-            {/* Photo rectangulaire */}
-            <div className="relative h-[210px] overflow-hidden bg-[#171310] sm:h-[245px] lg:h-[260px]">
-              <img
-                src={item.image}
-                alt={item.alt}
-                loading={index < 3 ? "eager" : "lazy"}
-                draggable={false}
-                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-              />
-
-              <div className="pointer-events-none absolute inset-0 bg-black/[0.04] transition-colors duration-500 group-hover:bg-transparent" />
+              <div className="overflow-hidden">
+                <motion.h2
+                  initial={
+                    reduceMotion
+                      ? false
+                      : {
+                          opacity: 0,
+                          y: "100%",
+                        }
+                  }
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="font-['Bodoni_Moda'] text-[clamp(4rem,8vw,8.5rem)] font-normal leading-[0.82] tracking-[-0.065em]"
+                >
+                  Le plaisir
+                  <br />
+                  <span className="italic text-[#e4b88e]">
+                    du jeu.
+                  </span>
+                </motion.h2>
+              </div>
             </div>
 
-            {/* Légende discrète */}
-            <figcaption className="flex h-12 items-center px-3 text-[9px] tracking-wide text-[#d8cfc4]/65 sm:h-14 sm:px-4 sm:text-[10px]">
-              {item.caption}
-            </figcaption>
-          </figure>
-        ))}
+            {/* TEXTE */}
+            <motion.div
+              className="max-w-md lg:col-span-4 lg:col-start-9"
+              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+              }}
+            >
+              <p className="text-sm leading-7 text-[#f4e9dc]/80 sm:text-base sm:leading-8">
+                Une table, quelques billes et le plaisir de prendre son
+                temps. Au MY PUB, le billard se joue comme on aime :
+                entre amis, autour d&apos;un verre et dans une ambiance qui
+                invite à rester.
+              </p>
+
+              <div className="mt-8 h-px w-14 bg-[#c17a3d]" />
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
+
+      {/* GALERIE */}
+      <div className="bg-[#0b0a09] py-20 md:py-28">
+        <div className="mb-10 px-6 sm:px-10 lg:px-[9%]">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="font-['Bodoni_Moda'] text-2xl italic text-[#c17a3d] sm:text-3xl">
+              Quelques instants.
+            </p>
+          </motion.div>
+        </div>
+
+        <motion.div
+          role="region"
+          aria-label="Galerie photos du billard chez MY PUB"
+          className="flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-10 lg:px-[9%]"
+          initial={reduceMotion ? false : { opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.8 }}
+        >
+          {gallery.map((item, index) => (
+            <motion.figure
+              key={item.image}
+              className={`group flex-none snap-start ${item.width}`}
+              initial={
+                reduceMotion
+                  ? false
+                  : {
+                      opacity: 0,
+                      y: 20,
+                    }
+              }
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: reduceMotion ? 0 : index * 0.06,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#201b17]">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading={index < 2 ? "eager" : "lazy"}
+                  draggable={false}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                />
+
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60" />
+
+                <span className="absolute bottom-4 left-4 font-['Bodoni_Moda'] text-sm italic text-[#f4e9dc]/80">
+                  {item.caption}
+                </span>
+              </div>
+            </motion.figure>
+          ))}
+        </motion.div>
+
+        {/* INDICATION MOBILE */}
+        <div className="mt-8 flex items-center justify-center gap-3 text-[9px] uppercase tracking-[0.22em] text-[#f4e9dc]/35 sm:hidden">
+          <span className="text-[#c17a3d]">←</span>
+          Faites défiler
+          <span className="text-[#c17a3d]">→</span>
+        </div>
+      </div>
     </section>
   );
 }

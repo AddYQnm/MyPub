@@ -1,7 +1,7 @@
 
 const venue = {
-  address: "Adresse officielle à renseigner",
-  hours: "Horaires à confirmer",
+  address: "12 Place du Vieux Marché, 76000 Rouen",
+  hours: "10h00 - 00h30",
 };
 
 export default function VisitSection() {
