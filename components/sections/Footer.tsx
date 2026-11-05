@@ -167,7 +167,7 @@ export default function Footer() {
 
         {/* Partie inférieure */}
         <div className="flex flex-col gap-4 pt-7 text-[9px] uppercase tracking-[0.15em] text-white/35 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} MY PUB</span>
+          <span>© 2026 MY PUB</span>
 
           <span>Rouen, France</span>
 

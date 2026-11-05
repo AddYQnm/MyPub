@@ -421,8 +421,8 @@ export default function ConditionsGeneralesUtilisationPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-5 text-[9px] uppercase tracking-[0.2em] text-[#f0e8da]/40 sm:flex-row sm:items-center sm:justify-between">
 
           <p>
-            © {new Date().getFullYear()} MY PUB — Rouen
-          </p>
+  © 2026 MY PUB — Rouen
+</p>
 
           <div className="flex flex-wrap gap-6">
             <Link
